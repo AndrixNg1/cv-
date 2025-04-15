@@ -1,0 +1,125 @@
+:root {
+    --white: #FFFFFF;
+    --pink: #FFF5FF;
+    --mint: #E4FFF5;
+    --lavender: #F5F3FF;
+    --yellow: #F5FFE4;
+    --blue: #F3FFFF;
+    --dark-blue: #1d3557;
+    --text-color: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--white);
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  .cv-container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    background: var(--lavender);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .sidebar {
+    width: 35%;
+    background: var(--mint);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sidebar h1 {
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+  }
+  
+  .sidebar h1 span {
+    font-weight: bold;
+  }
+  
+  .photo img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--white);
+  }
+  
+  .section {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .section p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .main {
+    width: 65%;
+    padding: 30px;
+    background: var(--white);
+  }
+  
+  .main h2 {
+    font-size: 20px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .main p, .main li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cv-container {
+      flex-direction: column;
+    }
+  
+    .sidebar, .main {
+      width: 100%;
+    }
+  
+    .skills {
+      grid-template-columns: 1fr;
+    }
+  }
+  
